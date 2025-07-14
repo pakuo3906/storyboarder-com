@@ -1,18 +1,38 @@
-# Storyboarder
+# Storyboarder × ComfyUI
+
+> **🤖 AI-Enhanced Fork**: This is a fork of [WonderUnit/storyboarder](https://github.com/wonderunit/storyboarder) with integrated [ComfyUI](https://github.com/comfyanonymous/ComfyUI) support for AI-powered visual generation.
 
 Storyboarder makes it easy to visualize a story as fast you can draw stick figures. Quickly draw to test if a story idea works. Create and show animatics to others. Express your story idea without making a movie.
+
+**✨ NEW: AI Generation Features**
+- Generate detailed backgrounds with ComfyUI workflows
+- Transform rough sketches into polished visuals
+- Consistent art style across your entire storyboard
+- Batch processing for multiple scenes
 
 [![screenshot](https://user-images.githubusercontent.com/441117/27712058-4404e214-5cf3-11e7-8fa3-b88ae924d154.gif)](https://www.wonderunit.com/storyboarder)
 
 Whether you are a story artist, writer, director, in advertising, or just a person with an idea, you can use this to quickly make storyboards.
 
-## Download
+## Download & Status
 
-### [Click here to download the latest release](https://wonderunit.com/storyboarder/)
+### Original Storyboarder
+- **[Official Download](https://wonderunit.com/storyboarder/)** - Original WonderUnit version
+- **[Report Issues](https://github.com/wonderunit/storyboarder/issues)** - For original Storyboarder bugs
 
-[PLEASE PLEASE PLEASE submit issues with bugs, ideas, suggestions, or any feedback! Thanks!](https://github.com/wonderunit/storyboarder/issues)
+### ComfyUI Fork (This Repository)
+- **Status**: 🚧 **In Development** - ComfyUI integration in progress
+- **See**: [COMFYUI_INTEGRATION_SPEC.md](./COMFYUI_INTEGRATION_SPEC.md) for technical roadmap
+- **Node.js v22**: ✅ Compatible (OpenSSL legacy provider fixed)
 
-Also, if this project seems interesting, could you press that star button at the top right? Thanks!!!!
+## What's New in This Fork
+
+This fork maintains 100% compatibility with original Storyboarder while adding:
+
+1. **AI Image Generation**: Direct ComfyUI integration in Shot Generator
+2. **Enhanced Workflows**: AI-assisted background and asset creation  
+3. **Modern Node.js**: Updated for Node.js v22 compatibility
+4. **Future-Ready**: Planned support for multiple AI backends
 
 ## It's easy...
 
@@ -105,6 +125,22 @@ You're probably boarding on the Simpsons. You might want to escape North Korea t
 
 https://wonderunit.com/thoughts-on-free-and-open-source/
 
-## Contributers
+## Credits & License
 
-We would love help on this project. If you are interested in helping out feel free to email charles@wonderunit.com or submit a PR.
+### Original Project
+**Storyboarder** by [WonderUnit](https://wonderunit.com) - [Original Repository](https://github.com/wonderunit/storyboarder)
+- Created by Charles Forman and the WonderUnit team
+- Contact: charles@wonderunit.com
+
+### Fork Information  
+**Storyboarder × ComfyUI** - AI-Enhanced Fork
+- ComfyUI integration and Node.js v22 compatibility
+- Maintains full compatibility with original project
+- [View Integration Roadmap](./COMFYUI_INTEGRATION_SPEC.md)
+
+### Contributing
+- **Original Project**: Submit PRs to [wonderunit/storyboarder](https://github.com/wonderunit/storyboarder)
+- **This Fork**: Submit issues and PRs for ComfyUI-related features here
+
+### Open Source Notes
+See the original project's thoughts on open source: https://wonderunit.com/thoughts-on-free-and-open-source/
