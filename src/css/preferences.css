@@ -1,0 +1,264 @@
+.preferences-window {
+  margin: 0;
+  padding: 0;
+
+  background-color: #E5E5E5;
+  color: #3A3A3A;
+
+  font-family: var(--default-font-stack);
+  font-weight: 300;
+
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.preferences-form {
+  padding: 48px 60px 60px;
+}
+
+.preferences-title {
+  font-size: 48px;
+  margin: 0 0 10px 0;
+  font-weight: 900;
+}
+
+.preferences-fieldset {
+  padding: 0 0 24px 0;
+}
+.preferences-subhead {
+  font-size: 24px;
+  margin: 12px 0 9px;
+}
+
+.preferences-input {
+  margin: 24px 0;
+}
+.preferences-hint {
+  margin-top: 0.5rem;
+  opacity: 0.5;
+  font-size: 87.5%;
+  line-height: 1.4;
+ }
+  
+ sup {
+   font-size: 125%;
+   line-height: 0;
+   position: relative;
+   vertical-align: baseline;
+   top: 0;
+ }
+ 
+input[type=checkbox] {
+  display: none;
+}
+
+input[type="checkbox"] + label span {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: -2px 10px 0 0;
+  vertical-align: middle;
+  background: #3A3A3A;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked + label {
+  position: relative;
+}
+
+input[type=checkbox]:checked + label:before {
+  content:'✖';
+
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, .2);
+  font-size: 15px;
+  text-align: center;
+  line-height: 1;
+  position: absolute;
+  color: white;
+
+  margin: auto;
+  left: 1px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+
+input[type=number] {
+  font-size: 14px;
+  padding: 10px;
+  color: white;
+  background: #3A3A3A;
+  border: none;
+  border-radius: 3px;
+}
+
+.label-filename {
+  margin-left: 0.5rem;
+  display: block;
+  padding: 9px 0 7px 0;
+  line-height: 1;
+}
+
+/* see: .flatbutton */
+a.button {
+  padding: 8px 10px;
+  background-color: #3a3a3a;
+  color: #FDFDFD;
+  border-radius: 6px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+a.button:hover {
+  background: #444;
+}
+
+/* via mainwindow.css */
+.smallicon {
+  width: 25px;
+  height: 25px;
+  --color1: #888;
+  --color2: #444;
+  vertical-align: middle;
+  top: -2px;
+  left: -5px;
+  margin-right: -8px;
+  position: relative;
+  filter: drop-shadow(0px 1px 0px rgba(0, 0, 0, 0.3));
+}
+
+#revealKeyMapFile {
+  line-height: 25px;
+  padding: 4px 10px 2px 8px;
+}
+
+.preferences-window kbd {
+  display: inline-block;
+  font-family: var(--default-font-stack);
+  font-size: 12px;  
+  background: rgba(255,255,255,0.3);
+  padding: 2px 5px;
+  border: 1px solid #999;
+  border-radius: 2px;
+  color: #333333;
+  font-weight: 700;
+  position: relative;
+  top: 0;
+  min-width: 8px;
+  text-align: center;
+  margin: 0 2px;
+  line-height: 1;
+}
+
+
+
+#preferences-list {
+  display: block;
+}
+
+button {
+  font-family: var(--default-font-stack);
+}
+
+.open-language-editor {
+  padding-top: 24px;
+  position: relative;
+  display: relative;
+}
+
+.open-language-editor button {
+  background-color: #333333;
+  color: white;
+  padding: 12px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 6px;
+}
+
+/* Dropdown Button */
+.dropbtn-container { 
+  display: flex;
+  background-color:  #333333;
+  width: -webkit-fit-content;
+  width: fit-content;
+  margin-top: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width:120px;
+  padding: 12px;
+  font-size: 12px;
+}
+
+.dropbtn {
+  background-color: inherit;
+  color: white;
+  outline: none;
+  border: none;
+  width: 80px;
+  cursor: pointer;
+  pointer-events: inherit;
+  pointer-events: none;
+}
+
+.dropbtn-container .arrow {
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/arrow-down.png);
+  pointer-events: inherit;
+  pointer-events: none;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn-container:hover, .dropbtn-container:focus {
+  background-color: #3e3d3d;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333333;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  height:100px;
+  overflow: auto;
+  border-radius: 5px;
+  width:120px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content div {
+  color: white;
+  padding: 12px;
+  font-size: 12px;
+  
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 2px;
+}
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content div:hover {background-color: #4f4e4e}
+.selected {background-color: #5c65c0}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

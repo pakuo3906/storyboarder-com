@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/mainwindow.css">
+    <link rel="stylesheet" href="./css/storyboarder-sketch-pane.css">
+    <link rel="stylesheet" href="./css/toolbar.css">
+    <link rel="stylesheet" href="./css/tooltip.css">
+    <link rel="stylesheet" href="./css/keyboard.css">
+    <link rel="stylesheet" href="./css/context-menu.css">
+    <link rel="stylesheet" href="./css/transport.css">
+    <link rel="stylesheet" href="./css/notifications.css">
+    <link rel="stylesheet" href="./css/guides.css">
+    <link rel="stylesheet" href="./css/pomodoro-timer.css">
+    <link rel="stylesheet" href="./css/sts-sidebar.css">
+  </head>
+  <body>
+    <div id="drag-handle"></div>
+    <div id="scenes"></div>
+    <div id="script"></div>
+    <div id="storyboarder-main">
+      <div id="toolbar">
+        <div class="column">
+          <div class="group group_tools">
+            <div id="toolbar-light-pencil" data-group="brushes" class="button" data-tooltip
+              data-tooltip-title="Light Pencil"
+              data-tooltip-description="Draw rough ideas with this tool. Feel free to make mistakes. This tool draws on the reference layer, so you can easily erase these lines."
+              data-tooltip-keys="1"
+              data-tooltip-position="bottom center">
+              <div class="icon icon-toolbar-tool icon-toolbar-tool_light-pencil"></div>
+            </div>
+            <div id="toolbar-brush" data-group="brushes" class="button" data-tooltip
+              data-tooltip-title="Fill Brush Pen"
+              data-tooltip-description="Paint and fill with this tool. The brush pen is a steady stream of ink. This tool draws on the fill layer."
+              data-tooltip-keys="2"
+              data-tooltip-position="bottom center">
+              <div class="icon icon-toolbar-tool icon-toolbar-tool_brush"></div>
+            </div>
+            <div id="toolbar-tone" data-group="brushes" class="button" data-tooltip
+              data-tooltip-title="Tone Pastel"
+              data-tooltip-description="Tone and shade with this tool. This tool draws on the tone layer."
+              data-tooltip-keys="3"
+              data-tooltip-position="bottom center">
+              <div class="icon icon-toolbar-tool icon-toolbar-tool_tone"></div>
+            </div>
+            <div id="toolbar-pencil" data-group="brushes" class="button" data-tooltip
+              data-tooltip-title="Pencil"
+              data-tooltip-description="Draw and shade details with this tool. It's lighter and softer than the pen. This tool draws on the pencil layer."
+              data-tooltip-keys="4"
+              data-tooltip-position="bottom center">
+              <div class="icon icon-toolbar-tool icon-toolbar-tool_pencil"></div>
+            </div>
+            <div id="toolbar-pen" data-group="brushes" class="button" data-tooltip
+              data-tooltip-title="Ink Marker"
+              data-tooltip-description="This tool is for hard thicker lines. Use this tool for final inking and outlining. This tool draws on the ink layer."
+              data-tooltip-keys="5"
+              data-tooltip-position="bottom center">
+              <div class="icon icon-toolbar-tool icon-toolbar-tool_pen"></div>
+            </div>
+            <div id="toolbar-note-pen" data-group="brushes" class="button" data-tooltip
+              data-tooltip-title="Note Pen"
+              data-tooltip-description="Revise boards with this tool. Have a note? Draw right on top of the board. This tool draws on the notes layer, so it is easy to erase. This tool draws on the notes layer."
+              data-tooltip-keys="6"
+              data-tooltip-position="bottom center">
+              <div class="icon icon-toolbar-tool icon-toolbar-tool_note-pen"></div>
+            </div>
+            <div id="toolbar-eraser" data-group="brushes" class="button" data-tooltip
+              data-tooltip-title="Eraser"
+              data-tooltip-description="Made a mistake? Use the eraser. When holding option (or alt), it will only erase the tool’s layer you’re on. Otherwise, will erase all layers."
+              data-tooltip-keys="7|Option"
+              data-tooltip-position="bottom center">
+              <div class="icon icon-toolbar-tool icon-toolbar-tool_eraser"></div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="group group_colors">
+            <div class="toolbar-colors">
+              <div class="toolbar-colors_column">
+                <div id="toolbar-current-color" class="button" data-tooltip
+                  data-tooltip-title="Current Color"
+                  data-tooltip-description="Click to change the current color."
+                  data-tooltip-keys=""
+                  data-tooltip-position="bottom center">
+                  <div class="icon icon-toolbar-color_current"></div>
+                </div>
+
+                <div class="toolbar-brush-modifier-controls">
+                  <div class="toolbar-brush-modifier-controls_size" data-tooltip
+                    data-tooltip-title="Brush Size"
+                    data-tooltip-description="Drag value to increase or decrease the brush size … or just use the key commands like real pros!"
+                    data-tooltip-keys="[|]"
+                    data-tooltip-position="bottom center">
+                  </div>
+                  <div class="toolbar-brush-modifier-controls_stroke-opacity" data-tooltip
+                    data-tooltip-title="Stroke Opacity"
+                    data-tooltip-description="Drag value to adjust the overall opacity of new strokes."
+                    data-tooltip-position="bottom center">
+                  </div>
+                </div>
+              </div>
+              <div class="toolbar-colors_column">
+                <div id="toolbar-palette-colorA" class="button" data-tooltip
+                  data-tooltip-title="Palette Color 1"
+                  data-tooltip-description="Click to set the current color to this. Hold down to set this color to another."
+                  data-tooltip-keys="8"
+                  data-tooltip-position="bottom center">
+                  <div class="icon icon-toolbar-color_palette"></div>
+                </div>
+                <div id="toolbar-palette-colorB" class="button" data-tooltip
+                  data-tooltip-title="Palette Color 2"
+                  data-tooltip-description="Click to set the current color to this. Hold down to set this color to another."
+                  data-tooltip-keys="9"
+                  data-tooltip-position="bottom center">
+                  <div class="icon icon-toolbar-color_palette"></div>
+                </div>
+                <div id="toolbar-palette-colorC" class="button" data-tooltip
+                  data-tooltip-title="Palette Color 3"
+                  data-tooltip-description="Click to set the current color to this. Hold down to set this color to another."
+                  data-tooltip-keys="0"
+                  data-tooltip-position="bottom center">
+                  <div class="icon icon-toolbar-color_palette"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <div id="toolbar-trash" class="button" data-tooltip
+              data-tooltip-title="Clear Canvas"
+              data-tooltip-description="Press this to clear the whole drawing! Don't worry! You can always undo."
+              data-tooltip-keys="Backspace"
+              data-tooltip-position="bottom center">
+              <svg class="icon"><use xlink:href="./img/symbol-defs.svg#icon-trash"></use></svg>
+            </div>
+            <div id="toolbar-move" class="button" data-tooltip
+              data-tooltip-title="Move Mode"
+              data-tooltip-description="Drag the image to move."
+              data-tooltip-keys="CmdOrCtrl"
+              data-tooltip-position="bottom center">
+              <svg class="icon"><use xlink:href="./img/symbol-defs.svg#icon-move"></use></svg>
+            </div>
+            <div id="toolbar-scale" class="button" data-tooltip
+              data-tooltip-title="Scale Mode"
+              data-tooltip-description="Drag the image to scale."
+              data-tooltip-keys="Option+CmdOrCtrl"
+              data-tooltip-position="bottom center">
+              <svg class="icon"><use xlink:href="./img/symbol-defs.svg#icon-scale"></use></svg>
+            </div>
+
+            <div id="toolbar-marquee" class="button" data-tooltip
+              data-tooltip-title="Lasso Tool"
+              data-tooltip-description="Lasso an area of art to manipulate.
+              <p>
+                Draw to lasso an area. Add to area with SHIFT + draw. Subtract with ALT/OPTION + draw.
+                Press 'f' to fill area with current brush color and opacity. Press DELETE/BACKSPACE to erase area.
+              </p>
+              <p>
+                Press and hold inside lasso’d area to begin moving, then drag. Fill and erase work after move also.
+              </p>
+              <p>
+                ENTER to commit. ESCAPE to cancel.
+              </p>
+              "
+              data-tooltip-keys="l"
+              data-tooltip-position="bottom center">
+              <svg class="icon"><use xlink:href="./img/symbol-defs.svg#icon-marquee"></use></svg>
+            </div>
+
+          </div>
+          <div class="group group_undo_redo">
+            <div id="toolbar-undo" class="button" data-tooltip
+              data-tooltip-title="Undo"
+              data-tooltip-description="Made a mistake? No problem. You can undo!"
+              data-tooltip-keys="CmdOrCtrl+Z"
+              data-tooltip-position="bottom center">
+              <svg class="icon"><use xlink:href="./img/symbol-defs.svg#icon-undo"></use></svg>
+            </div>
+            <div id="toolbar-redo" class="button" data-tooltip
+              data-tooltip-title="Redo"
+              data-tooltip-description="Undo too much? You can redo what you've undone."
+              data-tooltip-keys="Shift+CmdOrCtrl+Z"
+              data-tooltip-position="bottom center">
+              <svg class="icon"><use xlink:href="./img/symbol-defs.svg#icon-redo"></use></svg>
+            </div>
+          </div>
+          <div class="group">
+            <div id="toolbar-grid" class="button" data-tooltip
+              data-tooltip-title="Grid Guide"
+              data-tooltip-description="Toggle a grid used for measured drawings or straight lines."
+              data-tooltip-keys=""
+              data-tooltip-position="bottom center">
+              <svg class="icon"><use xlink:href="./img/symbol-defs.svg#icon-grid"></use></svg>
+            </div>
+            <div id="toolbar-center" class="button" data-tooltip
+              data-tooltip-title="Center Guide"
+              data-tooltip-description="Toggle centerline guide used to make sure your drawing is centered."
+              data-tooltip-keys=""
+              data-tooltip-position="bottom center">
+              <svg class="icon"><use xlink:href="./img/symbol-defs.svg#icon-center"></use></svg>
+            </div>
+            <div id="toolbar-thirds" class="button" data-tooltip
+              data-tooltip-title="Rule of Thirds Guide"
+              data-tooltip-description="Toggle thirds guide to center focus on the thirds. Any mediocre cinematographer uses this all the time!"
+              data-tooltip-keys=""
+              data-tooltip-position="bottom center">
+              <svg class="icon"><use xlink:href="./img/symbol-defs.svg#icon-thirds"></use></svg>
+            </div>
+            <div style="display:none" id="toolbar-perspective" class="button" data-tooltip
+              data-tooltip-title="3D Guide"
+              data-tooltip-description="Match the 3d grid for your generated shot. If you don't have a generated shot, you get an eye level 3d view. Noiiice."
+              data-tooltip-keys=""
+              data-tooltip-position="bottom center">
+              <svg class="icon"><use xlink:href="./img/symbol-defs.svg#icon-perspective"></use></svg>
+            </div>
+            <div id="toolbar-onion" class="button" data-tooltip
+              data-tooltip-title="Onion Skin"
+              data-tooltip-description="Toggle display of last and next frame so you can tween shots for transitions and animations."
+              data-tooltip-keys="o"
+              data-tooltip-position="bottom center">
+              <svg class="icon"><use xlink:href="./img/symbol-defs.svg#icon-onion"></use></svg>
+            </div>
+            <div id="toolbar-captions" class="button" data-tooltip
+              data-tooltip-title="Captions"
+              data-tooltip-description="Toggle dialogue caption overlays on and off."
+              data-tooltip-keys="c"
+              data-tooltip-position="bottom center">
+              <svg class="icon"><use xlink:href="./img/symbol-defs.svg#icon-caption"></use></svg>
+            </div>
+          </div>
+          <div class="group">
+            <div id="toolbar-open-in-editor" class="button" data-tooltip
+              data-tooltip-title="Edit in Photoshop"
+              data-tooltip-description="Click here to edit the board in Photoshop. When you're done editing, just save the file in Photoshop. It will update in Storyboarder automatically."
+              data-tooltip-keys="CmdOrCtrl+."
+              data-tooltip-position="bottom center">
+              <svg class="icon"><use xlink:href="./img/symbol-defs.svg#icon-photoshop"></use></svg>
+            </div>
+          </div>
+          <div class="group" style="display: none;">
+            <div id="toolbar-pomodoro-rest" class="button toolbar-pomodoro-rest" data-tooltip
+                data-tooltip-title="Sketch Sprint"
+                data-tooltip-description="Set a timer and record a timelapse of your work."
+                data-tooltip-position="bottom center">
+                <svg id="toolbar-pomodoro-rest-icon" class="icon"><use xlink:href="./img/symbol-defs.svg#icon-sprint"></use></svg>
+            </div>
+            <div id="toolbar-pomodoro-running" class="button toolbar-pomodoro-running" data-tooltip
+                data-tooltip-title="Sketch Sprint"
+                data-tooltip-description="Set a timer and record a timelapse of your work."
+                data-tooltip-position="bottom center"
+                style="display: none;">
+                <svg id="toolbar-pomodoro-running-icon" class="icon"><use xlink:href="./img/symbol-defs.svg#icon-sprint"></use></svg>
+                <div id="toolbar-pomodoro-running-status" class="toolbar-pomodoro-running-status"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sketch-body">
+        <div id="storyboarder-sketch-pane"></div>
+        <div id="board-metadata">
+          <div class="board-metadata-container">
+            <div class="number"><svg class="smallicon"><use xlink:href="./img/symbol-defs.svg#icon-board"></use></svg><span id="shot"></span></div>
+            <div class="row" id="board-numbers">12 of 76</div>
+            <div class="row" id="line-mileage" 
+              data-tooltip
+              data-tooltip-title="Line Mileage"
+              data-tooltip-description="As you draw, the line miles for the shot add up. This is useful to know how much you are drawing per shot. Remember, you aren't trying to make the next Moner Lisa. You're just trying to get the idea across."
+              data-tooltip-keys=""
+              data-tooltip-position="left middle">
+              <svg class="smallericon"><use xlink:href="./img/symbol-defs.svg#icon-linemileage"></use></svg><span id="line-miles"></span>
+            </div>
+
+            <div class="hardrule"></div>
+
+            <div
+              class="row"
+              id="shot-generator-container"
+              data-tooltip
+              data-tooltip-title="Open"
+              data-tooltip-description="Open Shot Generator"
+              data-tooltip-keys=""
+              data-tooltip-position="left middle"
+            >
+            </div>
+
+            <div class="hardrule"></div>
+
+            <div class="row" id="new-shot"
+              data-tooltip
+              data-tooltip-title="Is this board a new shot?"
+              data-tooltip-description="Check this box if the board is a new shot. You can have multiple boards per shot. This way you can animate or make a transition in a shot."
+              data-tooltip-keys="/"
+              data-tooltip-position="left middle">
+              <input type="checkbox" name="newShot" id="newShot" /><label for="newShot" id="new-shot-label"><span></span>New Shot?</label>
+            </div>
+            <div class="row">
+              <div id="duration"><svg class="smallicon"><use xlink:href="./img/symbol-defs.svg#icon-duration"></use></svg>Duration</div>
+              <div class="row">
+                <div class="col">
+                  <input type="text" name="duration" placeholder="ms" data-tooltip
+                  id="duration-ms"
+                  data-tooltip-title="Set the board duration"
+                  data-tooltip-description="Enter the number of milliseconds for a board. There are 1000 milliseconds in a second. 2000 milliseconds is the default."
+                  data-tooltip-keys=""
+                  data-tooltip-position="left middle">
+                </div>
+                <div class="col">
+                  <input type="text" name="frames" placeholder="frames" data-tooltip
+                  id="duration-fps"
+                  data-tooltip-title="Set the board duration"
+                  data-tooltip-description="Enter the number of frames for a board."
+                  data-tooltip-keys=""
+                  data-tooltip-position="left middle">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div><svg class="smallicon"><use xlink:href="./img/symbol-defs.svg#icon-dialogue"></use></svg><span id="dialog-title">Dialogue</span> <span id="suggested-dialogue-duration" data-tooltip
+              data-tooltip-title="Suggested board duration"
+              data-tooltip-description="Click to set the duration based on the dialogue text."
+              data-tooltip-keys=""
+              data-tooltip-position="left middle"></span></div>
+              <textarea name="dialogue" data-tooltip
+              id="dialogue-tooltip"
+              data-tooltip-title="Dialogue for board"
+              data-tooltip-description="Write some really sweet dialogue, like, ''As you know, I am your father.'' It will show up as a caption if you have it toggled on."
+              data-tooltip-keys=""
+              data-tooltip-position="left middle"></textarea>
+            </div>
+            <div class="row">
+              <div><svg class="smallicon"><use xlink:href="./img/symbol-defs.svg#icon-action"></use></svg><span id="action-title">Action</span></div>
+              <textarea name="action" data-tooltip
+              id="action-tooltip"
+              data-tooltip-title="Action for board"
+              data-tooltip-description="Write some action for the board."
+              data-tooltip-keys=""
+              data-tooltip-position="left middle"></textarea>
+            </div>
+            <div class="row">
+              <div class="inline"><svg class="smallicon"><use xlink:href="./img/symbol-defs.svg#icon-notes"></use></svg><span id="note-title">Notes</span></div>
+              <div class="layers-ui-notes-clear flatbutton small" data-tooltip
+              id="clear-note-tooltip"
+              data-tooltip-title="Clear notes drawing layer"
+              data-tooltip-description="Clear the notes layer for this board. You can also clear it when you are on the notes drawing tool and you press:"
+              data-tooltip-keys="Alt+Backspace"
+              data-tooltip-position="left middle"> <svg class="smallericon"><use xlink:href="./img/symbol-defs.svg#icon-trash"></use></svg><span id="clear-note-title">Clear Notes Layer</span></div>
+              <textarea name="notes" data-tooltip
+              id="note-tooltip"
+              data-tooltip-title="Notes for the board"
+              data-tooltip-description="Write some notes. Could be board notes for changes, or just some notes for the shot."
+              data-tooltip-keys=""
+              data-tooltip-position="left middle"></textarea>
+            </div>
+
+            <div class="row">
+              <div class="audiofile_container">
+
+                <div class="recording_container">
+                  <div class="record_button">
+                    <div class="flatbutton">
+                      <div class="record_icon">
+                        <span style="color: red; font-weight: bold">R</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="record_visualization">
+                    <canvas></canvas>
+                  </div>
+                </div>
+
+                <div class="audiofile_button">
+                  <div class="flatbutton">
+                    <div class="audiofile_icon">
+                      <svg class="smallicon">
+                        <use xlink:href="./img/symbol-defs.svg#icon-speaker-on"></use>
+                      </svg>
+                    </div>
+
+                    <span class="audiofile_text">
+                      <span class="paren">(</span><a>no audio</a><span class="paren">)</span>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="audiofile_clear">
+                  <div class="flatbutton"
+                       data-tooltip
+                       id="remove-audio"
+                       data-tooltip-title="Remove audio"
+                       data-tooltip-description="Remove audio reference from this board. The file will remain on disk unless Clean Up Scene is used."
+                       data-tooltip-keys=""
+                       data-tooltip-position="left middle">
+                    <svg class="smallicon">
+                      <use xlink:href="./img/symbol-defs.svg#icon-trash"></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <input
+                  hidden="true"
+                  type="text"
+                  name="audiofile"
+                  id="audiofile" />
+              </div>
+            </div>
+
+            <div class="hardrule"></div>
+
+            <div class="row">
+              <div class="inline"><svg class="smallicon"><use xlink:href="./img/symbol-defs.svg#icon-lightbox"></use></svg><span id="reference-layer-title">Reference Layer</span></div>
+              <div class="layers-ui-reference-clear flatbutton small" data-tooltip
+              id="reference-layer-tooltip"
+              data-tooltip-title="Clear reference drawing layer"
+              data-tooltip-description="Clear the reference layer for this board. You can also clear it when you are on the light pencil drawing tool and you press:"
+              data-tooltip-keys="Alt+Backspace"
+              data-tooltip-position="left middle"> <svg class="smallericon"><use xlink:href="./img/symbol-defs.svg#icon-trash"></use></svg><span id="clear-title">Clear</span></div>
+              <div>
+                <div class="col">
+                  <div class="layers-ui-fill-merge flatbutton" data-tooltip
+                  id="merge-down-tooltip"
+                  data-tooltip-title="Merge the fill layer down to the reference layer"
+                  data-tooltip-description="This is useful if you want to take your existing fill layer and redraw for cleanup. This will combine both layers to the reference layer. The fill layer will be blank."
+                  data-tooltip-keys=""
+                  data-tooltip-position="left middle"><svg class="smallicon"><use xlink:href="./img/symbol-defs.svg#icon-mergedown"></use></svg><span id="merge-down-title">Merge Down</span></div>
+                </div>
+                <div class="col">
+                  <div class="layers-ui-reference-merge flatbutton" data-tooltip
+                  id="merge-up-tooltip"
+                  data-tooltip-title="Merge the reference layer up to the fill layer"
+                  data-tooltip-description="This is useful if you draw on the reference layer and you want to keep it in your drawing. This will combine both layers to the fill layer. The reference layer will be blank."
+                  data-tooltip-keys=""
+                  data-tooltip-position="left middle"><svg class="smallicon"><use xlink:href="./img/symbol-defs.svg#icon-mergeup"></use></svg><span id="merge-up-title">Merge Up</span></div>
+                </div>
+              </div>
+              <div>
+                <input class="layers-ui-reference-opacity" data-tooltip
+                  id="layer-opacity-tooltip"
+                  data-tooltip-title="Change Reference and Shot Generator Layer Opacity"
+                  data-tooltip-description="Change the opacity of the reference layer and Shot Generator layer. You will only be able to see the change if there is a saved Shot Generator shot, or something on the reference layer."
+                  data-tooltip-keys=""
+                  data-tooltip-position="left middle" type="range" min="0" max="100" step="25" value="100">
+              </div>
+            </div>
+
+            <div class="row" id="shot-generator-container" style="display:none">
+              <div class="inline"><svg class="smallicon"><use xlink:href="./img/symbol-defs.svg#icon-camera"></use></svg>Shot Generator</div>
+              <div id="sts-random" class="flatbutton small" data-tooltip
+              data-tooltip-title="Generate Random Shot Image"
+              data-tooltip-description="Randomize shot image generator settings"
+              data-tooltip-keys=""
+              data-tooltip-position="left middle"> <svg class="smallericon"><use xlink:href="./img/symbol-defs.svg#icon-cycle"></use></svg>Random</div>
+              <div id="sts-sidebar">
+                <input id="sts-input1" type="text" placeholder="Describe the shot: for example, medium shot" data-tooltip
+                  data-tooltip-title="Shot Description"
+                  data-tooltip-description="Describe the shot: for example, medium shot. Press enter to generate a shot image."
+                  data-tooltip-keys=""
+                  data-tooltip-position="left middle" />
+                <div id="sts-select" data-tooltip
+                  data-tooltip-title="Shot Description Data"
+                  data-tooltip-description="Refine data used to generate shot images."
+                  data-tooltip-keys=""
+                  data-tooltip-position="left middle"></div>
+                <div id="sts-shots" data-tooltip
+                  data-tooltip-title="Generated Shot Images"
+                  data-tooltip-description="Click to refine data for generated shot image. Double-click to use generated shot image as reference layer."
+                  data-tooltip-keys=""
+                  data-tooltip-position="left middle"></div>
+              </div>
+            </div>
+
+            <div class="hardrule"></div>
+
+            <div class="row sidebar-scene-settings">
+
+              <div style="margin-bottom:0.5rem" id="scene">Scene</div>
+
+              <div class="row">
+                <div class="col">
+                  <label style="color: #777" id="frame-rate">Frame Rate </label>
+                </div>
+                <div class="col">
+                  <select class="sidebar-scene-settings_fps">
+                    <option value="12">12</option>
+                    <option value="15">15</option>
+                    <option value="24">24</option>
+                    <option value="23.976">23.98 (23.976)</option>
+                    <option value="25">25</option>
+                    <option value="29.97">29.97</option>
+                    <option value="30">30</option>
+                    <option value="50">50</option>
+                    <option value="59.94">59.94</option>
+                    <option value="60">60</option>
+                  </select>
+                  <span style="color: #777; margin-left: 0.25rem">fps</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hardrule"></div>
+
+            <div class="row">
+              <div class="flatbutton" id="show-in-finder-button" data-tooltip
+              data-tooltip-title="Show board in file system"
+              data-tooltip-description="Click here to show the board image file in the file system. This is useful for external editors."
+              data-tooltip-keys=""
+              data-tooltip-position="left middle"><svg class="smallicon"><use xlink:href="./img/symbol-defs.svg#icon-showfile"></use></svg><span id="show-in-finder-title">Show in Folder</span></div>
+            </div>
+          </div>
+          <svg class="scroll-indicator">
+            <use xlink:href="./img/symbol-defs.svg#icon-small-down-arrow"></use>
+          </svg>
+        </div>
+      </div>
+      <div id="thumbnail-container">
+        <div id="thumbnail-drawer"></div>
+        <div id="thumbnail-cursor" style="display: none"></div>
+      </div>
+      <div id="scene-timeline-container"></div>
+      <div id="timeline">
+        <div class="left-block"></div>
+        <div id="movie-timeline-content">
+        </div>
+        <div class="right-block"></div>
+      </div>
+
+      <div id="playback">
+        <div id="left-stats">
+          <div class="stats-primary"></div>
+          <div class="stats-secondary"></div>
+        </div>
+        <div id="timeline-mode-control-view"></div>
+        <div id="icons">
+          <!--
+          <div class="transport-control transport-control-toggle-sound" data-action="toggleSound" data-tooltip
+              data-tooltip-title="Sound On/Off"
+              data-tooltip-description=""
+              data-tooltip-keys=""
+              data-tooltip-position="top center">
+            <svg aria-hidden="true">
+              <use xlink:href="./img/button-speaker.svg#Layer_9"></use>
+            </svg>
+          </div>
+          -->
+          <div class="transport-control transport-control-prev-scene" data-action="previousScene" data-tooltip
+            id="prev-scene-tooltip"
+            data-tooltip-title="Previous Scene"
+            data-tooltip-description="If current board is at the start or end of the scene, this will jump backward one scene. Otherwise this will jump to the start of the current scene."
+            data-tooltip-keys="CmdOrCtrl+Left"
+            data-tooltip-position="top center">
+            <svg aria-hidden="true">
+              <use xlink:href="./img/button-prevscene.svg#Layer_6"></use>
+            </svg>
+          </div>
+          <div class="transport-control transport-control-prev-board" data-action="prevBoard" data-tooltip
+            id="prev-board-tooltip"
+            data-tooltip-title="Previous Board"
+            data-tooltip-description="Use the arrow keys to flip between boards quickly to see how the story is flowing."
+            data-tooltip-keys="Left"
+            data-tooltip-position="top center">
+            <svg aria-hidden="true">
+              <use xlink:href="./img/button-prev.svg#Layer_2"></use>
+            </svg>
+          </div>
+          <div class="transport-control transport-control-play" data-action="togglePlayback" data-tooltip
+            id="play-tooltip"
+            data-tooltip-title="Play/Pause"
+            data-tooltip-description="This will toggle between playing automatically and not. The playback timing is default 2 seconds per board, or whatever is set as the board duration."
+            data-tooltip-keys=""
+            data-tooltip-position="top center">
+            <svg aria-hidden="true">
+              <use xlink:href="./img/button-play-pause.svg#icon-play"></use>
+            </svg>
+          </div>
+          <div class="transport-control transport-control-next-board" data-action="nextBoard" data-tooltip
+            id="next-board-tooltip"
+            data-tooltip-title="Next Board"
+            data-tooltip-description="Use the arrow keys to flip between boards quickly to see how the story is flowing."
+            data-tooltip-keys="Right"
+            data-tooltip-position="top center">
+            <svg aria-hidden="true">
+              <use xlink:href="./img/button-next.svg#Layer_3"></use>
+            </svg>
+          </div>
+          <div class="transport-control transport-control-next-scene" data-action="nextScene" data-tooltip
+            id="next-scene-tooltip"
+            data-tooltip-title="Next Scene"
+            data-tooltip-description="If current board is at the start or end of the scene, this will jump forward one scene. Otherwise this will jump to the end of the current scene."
+            data-tooltip-keys="CmdOrCtrl+Right"
+            data-tooltip-position="top center">
+            <svg aria-hidden="true">
+              <use xlink:href="./img/button-nextscene.svg#Layer_5"></use>
+            </svg>
+          </div>
+          <!--
+          <div class="transport-control transport-loop" data-action="loop" data-tooltip
+            data-tooltip-title="Loop On/Off"
+            data-tooltip-description=""
+            data-tooltip-keys=""
+            data-tooltip-position="top center">
+            <svg aria-hidden="true">
+              <use xlink:href="./img/button-loop.svg#Layer_7"></use>
+            </svg>
+          </div>
+          -->
+        </div>
+        <div id="right-stats">
+          <div class="stats-primary">
+            <br />
+          </div>
+          <div class="stats-secondary">
+            <br />
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+    <div id="notifications" class="notifications"></div>
+  <script>
+    if (typeof require !== 'undefined') {
+   
+      window.onerror = (message, source, lineno, colno, error) => require('electron').ipcRenderer.send('errorInWindow', message, source, lineno, colno, error)
+      require('./js/window/main-window')
+    }
+  </script>
+  </body>
+</html>
