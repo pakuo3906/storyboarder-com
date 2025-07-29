@@ -1,0 +1,791 @@
+{
+  "vr-enter": "VR Enter",
+  "Language": "言語",
+  "Name": "日本語",
+  "menu": {
+    "view": {
+      "title": "表示",
+      "reload": "再読み込み",
+      "toggle-dev-tools": "開発者ツールの切り替え",
+      "cycle-view-mode": "表示モードの切り替え",
+      "reverse-cycle-view-mode": "表示モードの逆切り替え",
+      "toggle-grid-guide": "Grid Guide の切り替え",
+      "toggle-center-guide": "Center Guide の切り替え",
+      "toggle-thirds-guide": "Thirds Guide の切り替え",
+      "toggle-3D-guide": "3D Guide の切り替え",
+      "toggle-onion-skin": "Onion Skin の切り替え",
+      "toggle-captions": "Caption の切り替え",
+      "toggle-boards-timeline-mode": "Boards/Timeline Mode の切り替え",
+      "toggle-fullscreen": "フルスクリーンの切り替え",
+      "actual-size": "Canvas: 実際のサイズ",
+      "enable-fps-meter": "FPS Meter を有効化",
+      "scale-ui-up": "UI: 拡大",
+      "scale-ui-down": "UI: 縮小",
+      "reset-ui-scale": "UI: スケールを100%にリセット",
+      "cycle-shading-mode": "Shading Mode の切り替え"
+    },
+    "file": {
+      "title": "ファイル",
+      "open": "開く…",
+      "save": "保存",
+      "save-as": "名前を付けて保存…",
+      "export-animated-gif": "アニメーション GIF をエクスポート",
+      "export-scene-final-cut-proX-and-premiere": "Final Cut Pro X および Premiere 用にシーンをエクスポート",
+      "export-scene-as-images": "シーンを画像としてエクスポート",
+      "export-video": "動画をエクスポート",
+      "export-to-web": "Web にエクスポート…",
+      "export-project-as-zip": "プロジェクトを ZIP としてエクスポート",
+      "clean-up-scene": "シーンをクリーンアップ…",
+      "print-pdf": "印刷または PDF にエクスポート…",
+      "print-storyboarder-worksheet": "Storyboarder ワークシートを印刷…",
+      "import-worksheets": "ワークシートをインポート…",
+      "import-images-to-new-boards": "画像を新しいボードにインポート…",
+      "import-image-and-replace": "Reference Layer の画像を置き換え…",
+      "export-glTF": "glTF をエクスポート…"
+    },
+    "edit": {
+      "title": "編集",
+      "undo": "元に戻す",
+      "redo": "やり直し",
+      "cut": "カット",
+      "copy": "コピー",
+      "paste": "ペースト",
+      "paste-and-replace": "ペーストして置き換え",
+      "select-all": "すべて選択",
+      "preferences": "設定",
+      "delete": "削除",
+      "group-ungroup": "グループ化 / グループ解除",
+      "open-shot-explorer": "Shot Explorer を開く",
+      "duplicate": "複製",
+      "drop": "ドロップ"
+    },
+    "window": {
+      "title": "ウィンドウ",
+      "zoom": "ズーム",
+      "bring-all-to-front": "すべて前面に移動",
+      "minimize": "最小化",
+      "close-window": "ウィンドウを閉じる"
+    },
+    "help": {
+      "title": "ヘルプ",
+      "key-commands": "キーコマンド…",
+      "show-me-story-tip": "ストーリーのヒントを表示！",
+      "learn-more": "詳細情報",
+      "getting-started": "はじめに…",
+      "faq": "よくある質問…",
+      "bug-submit": "バグを発見？問題を報告してください！",
+      "show-log-file": "ログファイルを表示..."
+    },
+    "navigation": {
+      "title": "ナビゲーション",
+      "play": "再生",
+      "previous-board": "前のボード",
+      "next-board": "次のボード",
+      "previous-scene": "前のシーン",
+      "next-scene": "次のシーン",
+      "stop-all-board-audio": "すべてのボード音声を停止",
+      "toggle-speaking": "音声読み上げの切り替え",
+      "audition-board-audio": "ボード音声をオーディション"
+    },
+    "boards": {
+      "title": "ボード",
+      "new-board": "新しいボード",
+      "new-board-before": "前に新しいボード",
+      "delete-boards": "ボードを削除",
+      "delete-boards-go-forward": "ボードを削除 - 前に進む",
+      "duplicate-board": "ボードを複製",
+      "reorder-left": "左に並び替え",
+      "reorder-right": "右に並び替え",
+      "add-audio-file": "音声ファイルを追加…",
+      "toggle-board-as-new-shot": "新しいショットとしてボードを切り替え"
+    },
+    "tools": {
+      "title": "ツール",
+      "light-pencil": "Light Pencil",
+      "brush": "Brush",
+      "tone": "Tone",
+      "pencil": "Pencil",
+      "pen": "Pen",
+      "note-pen": "Note Pen",
+      "eraser": "消しゴム",
+      "clear-all-layers": "すべてのレイヤーをクリア",
+      "clear-layer": "レイヤーをクリア",
+      "smaller-brush": "ブラシを小さく",
+      "larger-brush": "ブラシを大きく",
+      "use-palette-color1": "パレットカラー 1 を使用",
+      "use-palette-color2": "パレットカラー 2 を使用",
+      "use-palette-color3": "パレットカラー 3 を使用",
+      "flip-horizontal": "水平反転",
+      "flip-vertical": "垂直反転",
+      "shot-generator": "Shot Generator",
+      "edit-in-photoshop": "Photoshop で編集"
+    },
+    "about": {
+      "title": "について",
+      "services": "サービス",
+      "hide": "隠す",
+      "hide-others": "他を隠す",
+      "unhide": "表示",
+      "quit": "終了"
+    },
+    "language": {
+      "edit": "編集"
+    }
+  },
+  "welcome-window": {
+    "recentStoryboards": "最近のストーリーボード",
+    "new-storyboard": "新しいストーリーボードを作成…",
+    "welcome-line-1": "Storyboarder は、可能な限り高速でストーリーを視覚的にボード化できるシンプルなツールです。",
+    "welcome-line-2": "書かれたストーリーから作業するか、完全に新しいボードファイルを作成できます。ボードを作成して描画し、ボードを作成して描画し、ストーリーが生き生きとしてくるのを見てください。ワークシートを印刷して描画し、簡単にインポートすることもできます。",
+    "welcome-line-3": "さあ、始めましょう..."
+  },
+  "main-window": {
+    "toolbar": {
+      "tools": {
+        "light-pencil": {
+          "title": "Light Pencil",
+          "description": "このツールでラフなアイデアを描きます。間違いを恐れずに。このツールは参照レイヤーに描画するため、これらの線は簡単に消去できます。"
+        },
+        "brush": {
+          "title": "Fill Brush Pen",
+          "description": "このツールで塗りつぶします。ブラシペンは安定したインクの流れです。このツールは塗りつぶしレイヤーに描画します。"
+        },
+        "tone": {
+          "title": "Tone Pastel",
+          "description": "このツールでトーンと陰影を付けます。このツールはトーンレイヤーに描画します。"
+        },
+        "pencil": {
+          "title": "Pencil",
+          "description": "このツールで詳細を描画し、陰影を付けます。ペンより軽くて柔らかいです。このツールは鉛筆レイヤーに描画します。"
+        },
+        "pen": {
+          "title": "Ink Marker",
+          "description": "このツールは硬くて太い線用です。最終的なペン入れとアウトラインにこのツールを使用します。このツールはインクレイヤーに描画します。"
+        },
+        "note-pen": {
+          "title": "Note Pen",
+          "description": "このツールでボードを修正します。メモがありますか？ボードの上に直接描きます。このツールはメモレイヤーに描画するため、簡単に消去できます。"
+        },
+        "eraser": {
+          "title": "消しゴム",
+          "description": "間違いました？消しゴムを使用してください。Option（またはAlt）を押しながら使用すると、現在のツールのレイヤーのみを消去します。そうでなければ、すべてのレイヤーを消去します。"
+        }
+      },
+      "colors": {
+        "current-color": {
+          "title": "現在の色",
+          "description": "クリックして現在の色を変更します。"
+        },
+        "controls-size": {
+          "title": "ブラシサイズ",
+          "description": "値をドラッグしてブラシサイズを増減します…または、プロのようにキーコマンドを使用してください！"
+        },
+        "controls-stroke-opacity": {
+          "title": "ストローク不透明度",
+          "description": "値をドラッグして新しいストロークの全体的な不透明度を調整します。"
+        },
+        "palette-colorA": {
+          "title": "パレットカラー 1",
+          "description": "クリックして現在の色をこれに設定します。長押しして、この色を別の色に設定します。"
+        },
+        "palette-colorB": {
+          "title": "パレットカラー 2",
+          "description": "クリックして現在の色をこれに設定します。長押しして、この色を別の色に設定します。"
+        },
+        "palette-colorC": {
+          "title": "パレットカラー 3",
+          "description": "クリックして現在の色をこれに設定します。長押しして、この色を別の色に設定します。"
+        }
+      },
+      "editing": {
+        "toolbar-trash": {
+          "title": "Canvas をクリア",
+          "description": "これを押して全体の描画をクリアします！心配しないでください！いつでも元に戻せます。"
+        },
+        "toolbar-move": {
+          "title": "移動モード",
+          "description": "画像をドラッグして移動します。"
+        },
+        "toolbar-scale": {
+          "title": "スケールモード",
+          "description": "画像をドラッグしてスケールします。"
+        },
+        "toolbar-marquee": {
+          "title": "Lasso Tool",
+          "description": "アートの領域を囲んで操作します。\n<p>\n描画して領域を囲みます。SHIFT + 描画で領域を追加。ALT/OPTION + 描画で減算。\n現在のブラシの色と不透明度で領域を塗りつぶすには 'f' を押します。領域を消去するには DELETE/BACKSPACE を押します。\n</p>\n<p>\n囲まれた領域内で押し続けて移動を開始し、その後ドラッグします。移動後も塗りつぶしと消去が機能します。\n</p>\n<p>\nENTER で確定。ESCAPE でキャンセル。\n</p>"
+        }
+      },
+      "actions": {
+        "toolbar-undo": {
+          "title": "元に戻す",
+          "description": "間違いました？問題ありません。元に戻せます！"
+        },
+        "toolbar-redo": {
+          "title": "やり直し",
+          "description": "元に戻しすぎましたか？元に戻したことをやり直せます。"
+        }
+      },
+      "view": {
+        "toolbar-grid": {
+          "title": "Grid Guide",
+          "description": "測定した描画や直線に使用するグリッドを切り替えます。"
+        },
+        "toolbar-center": {
+          "title": "Center Guide",
+          "description": "描画が中央に配置されていることを確認するために使用する中心線ガイドを切り替えます。"
+        },
+        "toolbar-thirds": {
+          "title": "Rule of Thirds Guide",
+          "description": "三分割法ガイドを切り替えて、三分割点に焦点を合わせます。平凡な映画撮影監督がいつも使っています！"
+        },
+        "toolbar-perspective": {
+          "title": "3D Guide",
+          "description": "生成されたショットの3Dグリッドに合わせます。生成されたショットがない場合は、目線レベルの3Dビューが表示されます。素晴らしい。"
+        },
+        "toolbar-onion": {
+          "title": "Onion Skin",
+          "description": "最後と次のフレームの表示を切り替えて、トランジションとアニメーションのショットを中間フレーム化できます。"
+        },
+        "toolbar-captions": {
+          "title": "Caption",
+          "description": "対話キャプションオーバーレイのオン/オフを切り替えます。"
+        }
+      },
+      "externals": {
+        "toolbar-open-in-editor": {
+          "title": "Photoshop で編集",
+          "description": "ここをクリックして Photoshop でボードを編集します。編集が完了したら、Photoshop でファイルを保存するだけです。Storyboarder で自動的に更新されます。"
+        }
+      },
+      "pomodoro": {
+        "toolbar-pomodoro-rest": {
+          "title": "Sketch Sprint",
+          "description": "タイマーを設定して作業のタイムラプスを記録します。"
+        },
+        "toolbar-pomodoro-running": {
+          "title": "Sketch Sprint",
+          "description": "タイマーを設定して作業のタイムラプスを記録します。"
+        }
+      }
+    },
+    "board-information": {
+      "shot": "ショット",
+      "of": "の",
+      "board": "ボード",
+      "line-mileage": {
+        "title": "線の総延長",
+        "description": "描画すると、ショットの線の距離が蓄積されます。これは、ショットごとにどれだけ描画しているかを知るのに役立ちます。覚えておいてください、次のモナリザを作ろうとしているのではありません。アイデアを伝えようとしているだけです。"
+      },
+      "shot-generator-container": {
+        "title": "開く",
+        "description": "Shot Generator を開く"
+      },
+      "new-shot": "新しいショット？",
+      "new-shot-tooltip": {
+        "title": "このボードは新しいショットですか？",
+        "description": "ボードが新しいショットの場合は、このボックスにチェックを入れてください。1つのショットに複数のボードを持つことができます。これにより、ショット内でアニメーションやトランジションを作成できます。"
+      },
+      "duration": "再生時間",
+      "duration-ms": {
+        "title": "ボードの再生時間を設定",
+        "description": "ボードのミリ秒数を入力します。1秒は1000ミリ秒です。デフォルトは2000ミリ秒です。"
+      },
+      "duration-fps": {
+        "title": "ボードの再生時間を設定",
+        "description": "ボードのフレーム数を入力します。"
+      },
+      "dialog-title": "対話",
+      "suggested-dialogue-duration": {
+        "title": "推奨ボード再生時間",
+        "description": "クリックして対話テキストに基づいて再生時間を設定します。"
+      },
+      "dialogue-tooltip": {
+        "title": "ボードの対話",
+        "description": "「ご存知の通り、私はあなたの父です」のような素晴らしい対話を書いてください。キャプションを有効にしている場合、キャプションとして表示されます。"
+      },
+      "action-title": "アクション",
+      "action-tooltip": {
+        "title": "ボードのアクション",
+        "description": "ボードのアクションを書きます。"
+      },
+      "note-title": "メモ",
+      "note-tooltip": {
+        "title": "ボードのメモ",
+        "description": "メモを書きます。変更のためのボードメモや、ショットのメモでも構いません。"
+      },
+      "clear-note-title": "メモレイヤーをクリア",
+      "clear-note-tooltip": {
+        "title": "メモ描画レイヤーをクリア",
+        "description": "このボードのメモレイヤーをクリアします。メモ描画ツールを使用中に以下を押してもクリアできます："
+      },
+      "remove-audio": {
+        "title": "音声を削除",
+        "description": "このボードから音声参照を削除します。Clean Up Scene を使用しない限り、ファイルはディスク上に残ります。"
+      },
+      "reference-layer-title": "Reference Layer",
+      "reference-layer-tooltip": {
+        "title": "参照描画レイヤーをクリア",
+        "description": "このボードの参照レイヤーをクリアします。Light Pencil 描画ツールを使用中に以下を押してもクリアできます："
+      },
+      "clear-title": "クリア",
+      "merge-down-tooltip": {
+        "title": "塗りつぶしレイヤーを参照レイヤーに統合",
+        "description": "既存の塗りつぶしレイヤーを取得してクリーンアップのために再描画したい場合に便利です。これは両方のレイヤーを参照レイヤーに結合します。塗りつぶしレイヤーは空白になります。"
+      },
+      "merge-down-title": "下に統合",
+      "merge-up-tooltip": {
+        "title": "参照レイヤーを塗りつぶしレイヤーに統合",
+        "description": "参照レイヤーに描画して、それを描画に保持したい場合に便利です。これは両方のレイヤーを塗りつぶしレイヤーに結合します。参照レイヤーは空白になります。"
+      },
+      "merge-up-title": "上/下に統合",
+      "layer-opacity-tooltip": {
+        "title": "参照レイヤーを塗りつぶしレイヤーに統合",
+        "description": "参照レイヤーと Shot Generator レイヤーの不透明度を変更します。保存された Shot Generator ショットまたは参照レイヤー上に何かがある場合にのみ変更を確認できます。"
+      },
+      "sts-random": {
+        "title": "ランダムショット画像を生成",
+        "description": "ショット画像ジェネレーター設定をランダム化"
+      },
+      "sts-input1": {
+        "title": "ショットの説明",
+        "description": "ショットを説明します：例えば、ミディアムショット。Enter を押してショット画像を生成します。"
+      },
+      "sts-select": {
+        "title": "ショット説明データ",
+        "description": "ショット画像の生成に使用するデータを調整します。"
+      },
+      "sts-shots": {
+        "title": "生成されたショット画像",
+        "description": "クリックして生成されたショット画像のデータを調整します。ダブルクリックして生成されたショット画像を参照レイヤーとして使用します。"
+      },
+      "scene": "シーン",
+      "frame-rate": "Frame Rate",
+      "show-in-finder-button": {
+        "title": "ファイルシステムでボードを表示",
+        "description": "ここをクリックして、ファイルシステムでボード画像ファイルを表示します。これは外部エディター用に便利です。"
+      },
+      "show-in-finder-title": "フォルダで表示"
+    },
+    "playback": {
+      "prev-scene-tooltip": {
+        "title": "前のシーン",
+        "description": "現在のボードがシーンの開始または終了にある場合、これは1つ前のシーンにジャンプします。そうでなければ、現在のシーンの開始にジャンプします。"
+      },
+      "prev-board-tooltip": {
+        "title": "前のボード",
+        "description": "矢印キーを使用してボード間を素早く切り替えて、ストーリーの流れを確認します。"
+      },
+      "play-tooltip": {
+        "title": "再生/一時停止",
+        "description": "これは自動再生のオン/オフを切り替えます。再生タイミングは、デフォルトでボードあたり2秒、またはボード再生時間として設定された値です。"
+      },
+      "next-board-tooltip": {
+        "title": "次のボード",
+        "description": "矢印キーを使用してボード間を素早く切り替えて、ストーリーの流れを確認します。"
+      },
+      "next-scene-tooltip": {
+        "title": "次のシーン",
+        "description": "現在のボードがシーンの開始または終了にある場合、これは1つ先のシーンにジャンプします。そうでなければ、現在のシーンの終了にジャンプします。"
+      }
+    }
+  },
+  "shot-generator": {
+    "inspector": {
+      "inspected-world": {
+        "file": "ファイル",
+        "scene": "シーン",
+        "ground": "Ground",
+        "bg-color": "背景色",
+        "room": "Room",
+        "environment": "Environment",
+        "ambient-light": "Ambient Light",
+        "directional-light": "Directional Light",
+        "fog": "Fog",
+        "grayscale": "Grayscale",
+        "shading-mode": "Shading Mode"
+      },
+      "common": {
+        "object-creation-help": "カスタムオブジェクト用3Dモデルの作成方法",
+        "visible": "表示",
+        "rotation": "回転",
+        "intensity": "強度",
+        "tilt": "チルト",
+        "distance": "距離",
+        "roll": "ロール",
+        "select-preset-name": "新しいプリセット名:",
+        "add-preset": "追加",
+        "height": "高さ",
+        "tint-color": "ティントカラー",
+        "search-models": "モデルを検索…",
+        "or": "または",
+        "select-file": "ファイルを選択…",
+        "select-image": "画像を選択…",
+        "size": "サイズ",
+        "width": "幅",
+        "length": "長さ",
+        "depth": "奥行き",
+        "rotate-x": "X軸回転",
+        "rotate-y": "Y軸回転",
+        "rotate-z": "Z軸回転",
+        "scale": "スケール",
+        "opacity": "不透明度",
+        "yes": "はい",
+        "no": "いいえ",
+        "are-you-sure": "本当によろしいですか？"
+      },
+      "inspected-element": {
+        "properties": "プロパティ:"
+      },
+      "camera": {
+        "fov": "F.O.V."
+      },
+      "character": {
+        "skinny": "痩せ型",
+        "obese": "肥満",
+        "muscular": "筋肉質",
+        "head": "頭",
+        "drop-character": "Character を床に落とす",
+        "morphs": "変形"
+      },
+      "character-preset": {
+        "preset": "プリセット"
+      },
+      "hand-preset": {
+        "select-saving-hand": "保存する手を選択:",
+        "hand": "手",
+        "search-hand-pose": "ハンドポーズを検索…",
+        "select-hand": "装着先",
+        "left-hand": "左手",
+        "right-hand": "右手",
+        "both-hands": "両手"
+      },
+      "pose-preset": {
+        "search-pose": "ポーズを検索…",
+        "mirror-pose": "ポーズをミラー"
+      },
+      "attachables-inspector": {
+        "attached-to-bone": "ボーンに装着"
+      },
+      "hair": {
+        "no-value": "髪なし"
+      },
+      "emotions": {
+        "no-value": "なし",
+        "search-list-label": "感情を検索…",
+        "emotion-creation-help": "Character用感情の作成方法"
+      },
+      "object": {
+        "drop-object": "Object を床に落とす"
+      },
+      "image": {
+        "image-file": "画像ファイル",
+        "visible-to-camera": "Camera に表示"
+      },
+      "light": {
+        "angle": "角度",
+        "penumbra": "半暗部",
+        "decay": "減衰"
+      },
+      "volume": {
+        "layer-image-files": "レイヤー画像ファイル",
+        "select-layer-images": "レイヤー画像を選択",
+        "layers": "レイヤー",
+        "color": "色"
+      }
+    },
+    "toolbar": {
+      "camera": {
+        "tooltip": {
+          "title": "Camera を追加",
+          "description": "シーンに新しい Camera を追加します。"
+        },
+        "title": "Camera"
+      },
+      "object": {
+        "tooltip": {
+          "title": "Object を追加",
+          "description": "新しい Object を追加します。左側でプロパティを変更できます。"
+        },
+        "title": "Object"
+      },
+      "character": {
+        "tooltip": {
+          "title": "Character を追加",
+          "description": "シーンに新しい Character を追加します。コントロールポイントの球体をドラッグしてポーズを変更できます。"
+        },
+        "title": "Character"
+      },
+      "light": {
+        "tooltip": {
+          "title": "Light を追加",
+          "description": "シーンにスポットライトを追加します。"
+        },
+        "title": "Light"
+      },
+      "volume": {
+        "tooltip": {
+          "title": "Volume を追加",
+          "description": "雨、霧、爆発などの Volume を追加します。"
+        },
+        "title": "Volume"
+      },
+      "image": {
+        "tooltip": {
+          "title": "Image を追加",
+          "description": "シーンの参照画像、ポスター、またはマットペインティングに便利です。追加後、インスペクター（左側）を使用して画像ファイルを選択し、プロパティを設定します。画像ファイルをシーンにドラッグ&ドロップしたり、クリップボードから画像をペーストすることもできます。"
+        },
+        "title": "Image"
+      },
+      "open-in-vr": {
+        "tooltip": {
+          "title": "VR で開く",
+          "description": "これをクリックして、Oculus Quest などの VR ブラウザで入力すべきアドレスを確認します。"
+        },
+        "title": "VR で開く"
+      },
+      "save-to-board": {
+        "tooltip": {
+          "title": "ボードに保存",
+          "description": "現在のショットを現在のストーリーボードに保存します。保存後、このウィンドウを閉じることができます。"
+        },
+        "title": "ボードに保存"
+      },
+      "insert-as-new-board": {
+        "tooltip": {
+          "title": "新しいボードとして挿入",
+          "description": "現在のショットを現在のストーリーボードの後に挿入します。新しいボードを挿入した後、このウィンドウを閉じるか、さらにショットを挿入し続けることができます。"
+        },
+        "title": "新しいボードとして挿入"
+      },
+      "popup": {
+        "open-vr": "表示するには、VR ウェブブラウザで以下にアクセス",
+        "scary-warning": "VR が信頼できるサーバーではなく、このコンピューターから実行されているため、\n怖いブラウザ警告メッセージが表示される場合があります。\nOculus Browser では、「詳細設定」をクリックし、「続行」をクリックして自己署名証明書を受け入れてください。\n詳細は {{link}} で確認してください"
+      }
+    },
+    "camera-panel": {
+      "roll-camera": {
+        "title": "Roll Camera Angle",
+        "description": "ダッチアングルを作成するために、ロール軸周りで Camera を回転します。"
+      },
+      "pan-tilt-camera": {
+        "title": "Pan / Tilt Camera Angle",
+        "description": "このコントロールをクリック&ドラッグするか、3D ビューポートをクリック&ドラッグして Camera をパン/チルトします。移動中にクリック&ドラッグすることもできます。"
+      },
+      "move-camera": {
+        "title": "Camera を移動",
+        "description": "Camera を前後左右に移動します。Camera 移動中にパンすることもできます。Shift を押しながらで高速移動できます。"
+      },
+      "elevate-camera": {
+        "title": "Camera を昇降",
+        "description": "Camera を上下に昇降します。Shift を押しながらで高速昇降できます。"
+      },
+      "change-camera-lens": {
+        "title": "Camera Lens を変更（ズーム）",
+        "description": "Camera レンズの画角を変更します。ブラケットキーを押すと、標準プライムレンズ角度にスナップします。"
+      },
+      "auto-shot-framing": {
+        "title": "自動ショットフレーミング",
+        "description": "Character を選択してからショットサイズまたは Camera アングルを選択して、ショットをフレーミングするように Camera を自動的に配置します。"
+      },
+      "roll": "Roll",
+      "pan": "Pan",
+      "tilt": "Tilt",
+      "move": "移動",
+      "elevate": "昇降",
+      "lens": "Lens",
+      "open-shot-explorer": "Shot Explorer を開く"
+    },
+    "board-inspector": {
+      "dialogue": "対話",
+      "action": "アクション",
+      "notes": "メモ"
+    },
+    "camera-inspector": {
+      "camera": "Camera",
+      "change-active-camera": {
+        "title": "アクティブ Camera を変更",
+        "description": "シーンに複数の Camera がある場合、ショット用のアクティブ Camera を変更できます。"
+      }
+    },
+    "guides-inspector": {
+      "guides": "ガイド"
+    }
+  },
+  "shot-explorer": {
+    "insert-camera": "Camera を挿入",
+    "characters-warning": "シーンに少なくとも1つの組み込み Character を追加する必要があります",
+    "on": "オン"
+  },
+  "xr": {
+    "controls": {
+      "width": "幅",
+      "height": "高さ",
+      "depth": "奥行き",
+      "size": "サイズ",
+      "opacity": "不透明度",
+      "scale": "スケール",
+      "head": "頭",
+      "morph-target": "変形ターゲット",
+      "skinny": "痩せ型",
+      "muscular": "筋肉質",
+      "obese": "肥満",
+      "intensity": "強度",
+      "angle": "角度",
+      "distance": "距離",
+      "penumbra": "半暗部",
+      "visible-to-camera": "Camera に表示",
+      "set-visible-to-camera": "Camera に表示として設定",
+      "active-camera": "アクティブ Camera",
+      "set-active-camera": "アクティブ Camera として設定",
+      "pose-capture": "ポーズキャプチャ",
+      "left": "左",
+      "both": "両方",
+      "right": "右",
+      "objects": "オブジェクト"
+    },
+    "boards": {
+      "sg-has-unsaved-changed": "Shot Generator に未保存の変更があります。",
+      "boards.overwrite-with-vr-changes": "VR の変更で上書きしてもよろしいですか？",
+      "changes-not-saved": "変更が保存されていません。",
+      "change-without-saving": "保存せずにボードを変更してもよろしいですか？",
+      "ok": "OK",
+      "cancel": "キャンセル",
+      "settings": "設定",
+      "show-cameras": "Camera を表示"
+    }
+  },
+  "preferences": {
+    "title": "設定",
+    "restart-hint": "変更を適用するには Storyboarder を再起動してください。",
+    "show-tooltips": "ツールチップを表示",
+    "save-automatically": "プロジェクトデータを自動保存",
+    "saving-hint": "無効にした場合、プロジェクトデータを保存するには「ファイル > 保存」を使用してください。画像データの変更は常に自動的に保存されることに注意してください。",
+    "force-psd-reload": "Storyboarder がフォーカスを取り戻したときに監視中の PSD を強制的に再読み込み",
+    "psd-reload-hint": "ネットワークドライブから作業している場合は有効にしてください。\nStoryboarder と他のアプリの切り替え時のパフォーマンスを向上させるには無効にしてください。無効にした場合、Storyboarder は PSD ファイルをバックグラウンドで監視します（すべてのコンピューターでサポートされているわけではありません）。",
+    "default-timing": "デフォルトボードタイミング（ミリ秒）",
+    "external-psd-editor": "外部 PSD エディター",
+    "psd-editor-hint": "アプリケーション（例：.exe または .app）を選択してください。デフォルトでは、オペレーティングシステムで PSD ファイルを開くために関連付けられたアプリケーションになります。\nデフォルトにリセットするには、ファイルプロンプトをキャンセルしてください。",
+    "reveal-keymap-file": "キーマップファイルを表示",
+    "reveal-keymap-file-hint": "Atom や VS Code などのソースコードエディターでキーマップ JSON ファイルを編集することで、\nどのキーがどの Storyboarder コマンドにバインドされているかを選択できます。",
+    "show-diagnostics": "診断を表示",
+    "show-diagnostics-hint": "Storyboarder が時間の経過とともに実行できる速度をフレーム/秒で表示します。トラブルシューティングに役立ちます。",
+    "line-delay": "直線遅延",
+    "line-delay-hint": "描画中にこの時間一時停止して直線モードに切り替えます。<br/>\n<kbd>Shift</kbd> を押しながら直線を描きます。<br/>直線を描画中に <kbd>Alt/Option</kbd> を押しながらで角度をスナップします。",
+    "notifications": "通知",
+    "show-notifications": "通知を有効化",
+    "aspirational-message": "毎時間のアファメーションを表示",
+    "notifications-line-mileage": "線の総延長へのコメントを許可",
+    "sounds": "サウンド",
+    "sounds-hint": "サウンドは一部のコンピューターで Storyboarder を遅くする可能性があります。<br />パフォーマンス向上のためにオフにできます。",
+    "drawing-sound-effect": "描画サウンドエフェクト",
+    "drawing-melodies": "描画メロディー",
+    "ui-sound-effect": "ユーザーインターフェース サウンドエフェクト",
+    "enable-high-quality-audio": "高品質オーディオを有効化",
+    "performance-enhancements": "パフォーマンス向上",
+    "performance-enhancements-hint": "描画が遅く感じる場合はこれらを無効にしてください。",
+    "high-quality-drawing-engine": "高品質描画エンジン",
+    "high-quality-drawing-engine-hint": "有効にすると、より高度なブラシを持つ高品質描画エンジンが使用されます。無効にすると、（より高速な）効率モード描画エンジンが使用されます。",
+    "languages": "言語",
+    "languages-hint": "言語を選択するか、独自の言語を作成してください。",
+    "open-language-editor": "言語エディターを開く",
+    "sign-out": "サインアウト",
+    "sign-out-hint": "Storyboarders.com アカウントにサインインしています",
+    "thanks-for-support": "Storyboarder をサポートしていただきありがとうございます！",
+    "additional-features-for-support": "サポーター向けの追加機能はこちらです。",
+    "add-watermark": "エクスポートした画像と動画に透かしを追加します。",
+    "custom-watermark": "カスタム透かし画像（デフォルトの場合は空白のままにしてください）"
+  },
+  "print-project": {
+    "title": "印刷",
+    "description": "プリセットから開始し、レイアウト、ヘッダー、ボードの設定を調整してカスタマイズします。",
+    "paper-size": "用紙サイズ",
+    "paper-size-a4-label": "A4",
+    "paper-size-letter-label": "Letter",
+    "paper-size-a4-hint": "A4 (8 ¼″ × 11 ¾″)",
+    "paper-size-letter-hint": "Letter (8 ½″ × 11″)",
+    "preset-selection-title": "プリセット",
+    "preset-selection-none": "(カスタマイズ)",
+    "preset-bcdaf15-title": "横長最小限 3×5",
+    "preset-ef6b965-title": "横長最小限 3×2",
+    "preset-9782c3c-title": "横長 3×",
+    "preset-f0b6ef5-title": "横長最小限 4×4",
+    "preset-97bdefb-title": "横長最小限 1×",
+    "preset-07fa6ed-title": "横長単体 1×",
+    "preset-3c3532b-title": "横長サムネイル 2×2",
+    "preset-7415d88-title": "横長サムネイル 3×3",
+    "preset-110b5e4-title": "横長サムネイル 6×5",
+    "preset-8949e51-title": "Hey-oh!",
+    "preset-4feebf9-title": "横長 Hey-oh!",
+    "preset-e32799a-title": "横長ストーリータイム 4×2",
+    "preset-d11d6df-title": "縦長ストーリータイム 4×3",
+    "preset-49b851f-title": "横長ペア 2×",
+    "preset-6df1a27-title": "縦長ペア 2×4",
+    "layout-title": "レイアウト",
+    "landscape": "横長",
+    "portrait": "縦長",
+    "grid-title": "グリッド",
+    "boards-layout-title": "テキスト配置",
+    "boards-layout-column": "下",
+    "boards-layout-row": "右",
+    "header-title": "ヘッダー",
+    "header-stats-title": "統計",
+    "header-stats-boards": "ボード",
+    "header-stats-shots": "ショット",
+    "header-stats-scene-duration": "再生時間",
+    "header-stats-aspect-ratio": "アスペクト比",
+    "header-stats-date-exported": "日付",
+    "boards-title": "ボード",
+    "boards-text-dialogue": "対話",
+    "boards-text-action": "アクション",
+    "boards-text-notes": "メモ",
+    "boards-shot-number-title": "ショット番号",
+    "boards-time-display-title": "時間",
+    "boards-time-display-none": "なし",
+    "boards-time-display-duration": "再生時間",
+    "boards-text-size-title": "テキストサイズ",
+    "boards-border-style-title": "境界線",
+    "boards-border-style-label-full": "画像とテキスト",
+    "boards-border-style-label-minimal": "画像のみ",
+    "print-button-label": "印刷！",
+    "export-pdf-button-label": "PDF をエクスポート",
+    "visible": "表示",
+    "hidden": "非表示"
+  },
+  "print-worksheet": {
+    "worksheet-title": "ワークシートを印刷",
+    "worksheet-intro": "この印刷されたワークシートにサムネイルボードを描いて、Storyboarder ファイルに魔法のようにインポートし直してください！",
+    "paper-size": "用紙サイズ",
+    "letter": "Letter",
+    "format": "A4",
+    "paper-orientation-label": "用紙の向き",
+    "paper-orientation-landscape": "横長",
+    "paper-orientation-portrait": "縦長",
+    "columns-label": "列",
+    "rows-label": "行",
+    "spacing-label": "間隔",
+    "copies-label": "部数",
+    "print-button": "印刷！",
+    "pdf-button": "PDF をエクスポート",
+    "prev_button": "前へ",
+    "page-info": "ページ",
+    "next_button": "次へ"
+  },
+  "new-window": {
+    "creation-title": "新しいストーリーボードを作成する方法は2つあります。どちらをお選びになりますか？",
+    "script-based-title": "スクリプトに基づく",
+    "script-based-description": "スクリプト付きのストーリーで作業している場合、\nスクリプトを指定でき、Storyboarder が\n各シーンのボード作成を支援し、\nボード作成中にスクリプトを表示します。ボード作成中に\nスクリプトを自由に変更してください。スクリプトは Fountain (.fountain)\nまたは Final Draft (.fdx) 形式にできます。",
+    "blank-title": "空白のストーリーボード",
+    "blank-description": "完全に空白のストーリーボードを簡単に作成できます。ボードを作成して描くだけです。後でストーリーボードを\nスクリプトベースのものにインポートしたい場合も\n簡単です。\n\n始めたばかりの場合、楽しみのために新しい空白のストーリーボードを作成してみませんか？",
+    "new-script": "スクリプトを選択...",
+    "new-blank": "空白を作成...",
+    "aspect-title": "アスペクト比は？",
+    "aspect-ultrawide": "ウルトラワイド",
+    "aspect-doublewide": "ダブルワイド",
+    "aspect-wide": "ワイド",
+    "aspect-hd": "HD",
+    "aspect-vertical-hd": "縦長 HD",
+    "aspect-square": "正方形",
+    "aspect-old": "旧式",
+    "aspect-description": "アスペクト比はボードのサイズを定義します。\n\n2.39:1 は最も広く、映画で見るようなものです。\n16:9 は現代のテレビで見るものです。\n4:3 は画面がちらつきプログラムが健全だった時代に\nおじいちゃんが見ていたものです。\n\n縦長 HD は選択しないでください。冗談で追加しました。"
+  }
+}
